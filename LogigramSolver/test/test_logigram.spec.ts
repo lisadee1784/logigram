@@ -10,34 +10,33 @@ describe("Logigram solver", function() {
 
     it("should create a solver", function() {
 
-        const game = new solver.Logigram(3, 5);
+        const game = new solver.Logigram(4, 5);
 
         game.series[0].title = "Witness";
-        game.series[0].seriesItems[0].name = "Alison";
-        game.series[0].seriesItems[1].name = "Dougal";
-        game.series[0].seriesItems[2].name = "Fred";
-        game.series[0].seriesItems[3].name = "Gina";
-        game.series[0].seriesItems[4].name = "Joseph";
+        game.series[0].seriesItems[0].name = "nicky";
+        game.series[0].seriesItems[1].name = "sarah";
+        game.series[0].seriesItems[2].name = "bob";
+        game.series[0].seriesItems[3].name = "gina";
+        game.series[0].seriesItems[4].name = "philip";
 
         game.series[1].title = "Feature";
-        game.series[1].seriesItems[0].name = "Black Hair";
-        game.series[1].seriesItems[1].name = "Blue Eye";
-        game.series[1].seriesItems[2].name = "Moustache";
-        game.series[1].seriesItems[3].name = "Scar";
-        game.series[1].seriesItems[4].name = "Tall";
+        game.series[1].seriesItems[0].name = "westway";
+        game.series[1].seriesItems[1].name = "adams";
+        game.series[1].seriesItems[2].name = "dogwood";
+        game.series[1].seriesItems[3].name = "highland";
+        game.series[1].seriesItems[4].name = "cherry";
 
         game.series[2].title = "Clothing";
-        game.series[2].seriesItems[0].name = "Blue Cap";
-        game.series[2].seriesItems[1].name = "Brown Scarf";
-        game.series[2].seriesItems[2].name = "Grey Jacket";
-        game.series[2].seriesItems[3].name = "Red Sweater";
-        game.series[2].seriesItems[4].name = "Torn Jeans";
+        game.series[2].seriesItems[0].name = nativity";
+        game.series[2].seriesItems[1].name = "cross";
+        game.series[2].seriesItems[2].name = "deer";
+        game.series[2].seriesItems[3].name = "santa";
+        game.series[2].seriesItems[4].name = "victoran";
 
 
         // clue 1
 
-        // neither fred nor the witness who noticed that the robber has a small
-        // scar on the bridge of his nose had notice the color of its jacket
+        // sarah is on cherry and dose not have a nativity
         game.setFalse({ Witness: "Fred" }, { Clothing: "Grey Jacket" });
         game.setFalse({ Feature: "Scar" }, { Clothing: "Grey Jacket" });
         game.setFalse({ Witness: "Fred" }, { Feature: "Scar" });
